@@ -2,7 +2,7 @@ version: '2'
 services:
   master:
     build: .
-    image: Jenkins/jenkins:latest
+    image: jenkins/jenkins:latest
     restart: unless-stopped
     hostname: jenkins
     ports:
