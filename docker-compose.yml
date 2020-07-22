@@ -1,12 +1,14 @@
 version: '3'
 services:
   jenkins_img_1:
-    container_name: Jdataplane_Jenkins
+    container_name: Jdataplane_jenkins
+    user: root
     build: ./jenkins
-    restart: always
+    restart: unless-stopped
     hostname: jenkins
     ports:
       - "8080:8080"
+      - "5000:5000"
     volumes:
       - /var/jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
