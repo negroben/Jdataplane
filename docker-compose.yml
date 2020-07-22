@@ -22,7 +22,7 @@ services:
     ports:
       - "8081:8081"
  
-  httpd_img_1:
+  haproxy_img_1:
     container_name: jdataplane_haproxy
     build: ./haproxy
     restart: always
