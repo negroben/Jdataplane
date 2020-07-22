@@ -1,0 +1,1 @@
+FROM haproxy:2.2

@@ -1,14 +1,22 @@
-version: '2'
+version: '3'
 services:
-  master:
-    build: .
-    image: jenkins/jenkins:latest
-    restart: unless-stopped
+  jenkins_img_1:
+    container_name: Jdataplane_Jenkins
+    build: ./jenkins
+    restart: always
     hostname: jenkins
     ports:
       - "8080:8080"
-      - "50000:50000"
     volumes:
       - /var/jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/local/bin/docker:/usr/local/bin/docker
+  
+  httpd_img_1:
+    container_name: Jdataplane_httpd
+    build: ./httpd
+    restart: always
+    hostname: httpd
+    ports:
+      - "8081:8081"
+ 
