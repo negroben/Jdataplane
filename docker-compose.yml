@@ -1,7 +1,7 @@
 version: '3'
 services:
   jenkins_img_1:
-    container_name: Jdataplane_jenkins
+    container_name: jdataplane_jenkins
     user: root
     build: ./jenkins
     restart: unless-stopped
@@ -15,10 +15,17 @@ services:
       - /usr/local/bin/docker:/usr/local/bin/docker
   
   httpd_img_1:
-    container_name: Jdataplane_httpd
+    container_name: jdataplane_httpd
     build: ./httpd
     restart: always
     hostname: httpd
     ports:
       - "8081:8081"
  
+ httpd_img_1:
+    container_name: jdataplane_haproxy
+    build: ./haproxy
+    restart: always
+    hostname: haproxy
+    ports:
+      - "80:80"

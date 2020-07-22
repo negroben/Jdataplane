@@ -1,2 +1,2 @@
 FROM httpd:2.4
-COPY ./conf/httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY ./conf/haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
