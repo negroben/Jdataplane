@@ -29,6 +29,7 @@ services:
     hostname: haproxy
     ports:
       - "80:80"
+      - "5555:5555"
     expose:
       - 80
     environment:
