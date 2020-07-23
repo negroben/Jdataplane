@@ -1,0 +1,1 @@
+/usr/local/bin/dataplaneapi --host=haproxy_img_1 --port=5555 --haproxy-bin=/usr/local/sbin/haproxy --config-file=/usr/local/etc/haproxy/haproxy.cfg --reload-cmd="systemctl reload haproxy" --reload-delay=5 --userlist=dataplaneapi --socket-path=/var/lib/haproxy/stats --log-level=trace
