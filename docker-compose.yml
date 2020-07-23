@@ -31,3 +31,6 @@ services:
       - "80:80"
     expose:
       - 80
+    environment:
+            - APACHE_1_IP=${HTTPD_IMAGE_1}
+            - APACHE_1_NOMBRE=${HTTPD_IMAGE_1}
