@@ -1,0 +1,10 @@
+[Unit]
+Description=Dataplane API - Para HAPROXY
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/local/sbin/dataplaneapiex
+
+[Install]
+WantedBy=default.target
