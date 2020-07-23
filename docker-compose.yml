@@ -14,7 +14,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/local/bin/docker:/usr/local/bin/docker
   
-  httpd_img_1:
+  ${HTTPD_IMAGE_1}:
     container_name: jdataplane_httpd
     build: ./httpd
     restart: always
