@@ -1,5 +1,5 @@
 FROM haproxy:2.2
-FROM deciderwill/haproxy-with-dataplane-api
+
 COPY ./conf/haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 COPY ./conf/dataplaneapi /usr/local/bin
 COPY ./conf/dataplane.service /etc/systemd/system
