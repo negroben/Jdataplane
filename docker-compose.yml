@@ -35,4 +35,4 @@ services:
     environment:
             - HTTPD_1_IP=${HTTPD_IMAGE_1}
             - HTTPD_1_NOMBRE=${HTTPD_IMAGE_1}
-    command: bash -c "/usr/local/sbin/dataplaneapiex &"        
+    #command: bash -c "/usr/local/sbin/dataplaneapiex &"        
