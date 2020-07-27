@@ -1,5 +1,5 @@
 ---
-- hosts: target_servers
+- hosts: serverlocal
   # use privilege (default : root)
   become: yes
   # method to use privilege
