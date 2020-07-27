@@ -1,0 +1,17 @@
+---
+- hosts: target_servers
+  # use privilege (default : root)
+  become: yes
+  # method to use privilege
+  become_method: sudo
+  tasks:
+  # task settings
+  - name: httpd is installed
+    yum:
+      name: httpd
+      state: present
+  - name: httpd is running and enabled
+    service:
+      name: httpd
+      state: started
+      enabled: yes
